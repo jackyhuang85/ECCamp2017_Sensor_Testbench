@@ -22,8 +22,8 @@ void setAT(){
       Serial.println("Setting PSWD:");
       mySerial.write("AT+PSWD=1234\r\n");
       WaitForResponse();
+      Serial.println("Please enter \"AT+BIND=<slave's address>\" to generate the binding bundle.");
 }
-
 void setup(){
   digitalWrite(9, HIGH);
   Serial.begin(9600);

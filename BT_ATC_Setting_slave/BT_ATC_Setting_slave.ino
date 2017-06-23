@@ -13,9 +13,10 @@ void setAT(){
       Serial.println("Setting UART:");
       mySerial.write("AT+UART=38400,0,0\r\n");
       WaitForResponse();
-      Serial.println("View address:");
+      Serial.println("**View address:**");
       mySerial.write("AT+ADDR?\r\n");
       WaitForResponse();
+      Serial.println("**Please copy the slave's address down for setting master.**");
       Serial.println("Setting CMODE:");
       mySerial.write("AT+CMODE=0\r\n");
       WaitForResponse();
